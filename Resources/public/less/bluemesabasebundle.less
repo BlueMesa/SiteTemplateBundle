@@ -8,7 +8,7 @@
 
 @fa-font-path:   "../../../../../../font";
 
-// local includes
+// Local includes
 @import 'bootstrap-fixes.less';
 @import 'tables.less';
 @import 'forms.less';
@@ -17,9 +17,17 @@
 @import 'dropdown-split.less';
 @import 'local.less';
 @import 'error.less';
-@import '../../../../../../../vendor/bluemesa/forms-bundle/Resources/public/less/bootstrap-select2.less';
-@import '../../../../../../../vendor/bluemesa/forms-bundle/Resources/public/less/bootstrap-typeahead.less';
-@import '../../../../../../../vendor/bluemesa/forms-bundle/Resources/public/less/bootstrap-collections.less';
+
+/**
+ * TODO: Remove src/Bluemesa imports and enable vendor/bluemesa imports when done with DEV mode
+ */
+@import '../../../../../../../src/Bluemesa/Bundle/FormsBundle/Resources/public/less/bootstrap-select2.less';
+@import '../../../../../../../src/Bluemesa/Bundle/FormsBundle/Resources/public/less/bootstrap-typeahead.less';
+@import '../../../../../../../src/Bluemesa/Bundle/FormsBundle/Resources/public/less/bootstrap-collections.less';
+// @import '../../../../../../../vendor/bluemesa/forms-bundle/Resources/public/less/bootstrap-select2.less';
+// @import '../../../../../../../vendor/bluemesa/forms-bundle/Resources/public/less/bootstrap-typeahead.less';
+// @import '../../../../../../../vendor/bluemesa/forms-bundle/Resources/public/less/bootstrap-collections.less';
+
 @import '../../../../../../../bower_components/bootstrap-datepicker/less/datepicker3.less';
 
 .antibody_applications_form_group .collection-item {
