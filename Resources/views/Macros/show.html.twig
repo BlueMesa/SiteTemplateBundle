@@ -1,8 +1,8 @@
-{% macro row(label, value, ctrl, name, popover, additional) %}
+{% macro row(label, value, ctrl, name, popover, additional, classes) %}
 <div class="form-group">
   <label class="control-label col-sm-3">{{ label }}</label>
   <div class="col-sm-9">
-    <span class="input-text">{% spaceless %}
+    <span class="input-text{% if classes is not empty %} {{ classes }}{% endif %}">{% spaceless %}
         {% if value is not empty %}
           {% set showName = (name is not empty or (value.name is defined and value.name != value.__toString)) %}
           {% if name is empty and value.name is defined %}{% set name = value.name %}{% endif %}
