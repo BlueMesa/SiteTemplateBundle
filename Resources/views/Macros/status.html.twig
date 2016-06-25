@@ -45,3 +45,23 @@
     <span class="label status label-danger">{{ temp }}℃</span>
   {% endif %}
 {% endmacro %}
+
+{% macro online(sensor) %}
+  {% if sensor.online %}
+    <span class="label status label-success"><i class="fa fa-rss" title="online" aria-hidden="true"></i></span>
+  {% else %}
+    <span class="label status label-danger"><i class="fa fa-rss" title="offline" aria-hidden="true"></i></span>
+  {% endif %}
+{% endmacro %}
+
+{% macro environmental(sensor) %}
+  {%  if sensor.tooCold %}
+    <span class="label status label-info"><i class="fa fa-exclamation-triangle" title="too cold" aria-hidden="true"></i></span>
+  {%  endif %}
+  {%  if sensor.tooHot %}
+    <span class="label status label-danger"><i class="fa fa-exclamation-triangle" title="too hot" aria-hidden="true"></i></span>
+  {%  endif %}
+  {%  if sensor.tooDry %}
+    <span class="label status label-warning"><i class="fa fa-times-circle" title="too dry" aria-hidden="true"></i></span>
+  {%  endif %}
+{% endmacro %}
