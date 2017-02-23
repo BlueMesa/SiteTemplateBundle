@@ -9,6 +9,6 @@
     {% endif %}
     <a href="{{ path(name ~ '_show', { 'id': value.id }) }}" class="btn btn-default">Cancel</a>
   {% else %}
-    <a href="{{ path(name ~ '_list') }}" class="btn btn-default">Cancel</a>
+    <a href="{{ path(name ~ '_index') }}" class="btn btn-default">Cancel</a>
   {% endif %}
 {% endmacro %}
