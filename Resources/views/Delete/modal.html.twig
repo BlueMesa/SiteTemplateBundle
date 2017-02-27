@@ -1,8 +1,7 @@
 {% block content %}
 <div class="well well-modal modal-danger">
   {% block form_header %}
-    <form action="{{ app.request.requestUri }}"
-          method="post" class="form-horizontal">
+      {{ form_start(form, {'attr': {'class': 'form-horizontal'} }) }}
   {% endblock form_header %}
   <div class="modal-header">
     <h3>{% block modal_header %}{% endblock modal_header %}</h3>
@@ -13,6 +12,5 @@
   <div class="modal-footer">
     {% block modal_footer %}{% endblock modal_footer %}
   </div>
-  </form>
 </div>
 {% endblock content %}

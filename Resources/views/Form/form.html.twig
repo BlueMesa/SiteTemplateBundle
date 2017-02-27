@@ -4,6 +4,10 @@
   {{ form_start(form, {'attr': {'class': 'form-horizontal'} }) }}
 {% endblock form_header %}
 
+{% block form_footer %}
+  {{ form_end(form) }}
+{% endblock form_footer %}
+
 {% block modal_body %}
   {{ form_errors(form) }}
   {{ form_rest(form) }}

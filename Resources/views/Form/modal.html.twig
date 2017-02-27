@@ -1,6 +1,6 @@
 {% block content %}
 <div class="col-xs-12">
-  <div class="well well-modal">
+  <div class="well well-modal {% spaceless %}{% block modal_class %}{% endblock modal_class %}{% endspaceless %}">
     {% block form_header %}
     <form action="{{ path('login_check') }}" method="post" class="form-horizontal">
     {% endblock form_header %}
@@ -13,7 +13,9 @@
     <div class="modal-footer">
       {% block modal_footer %}{% endblock modal_footer %}
     </div>
+    {% block form_footer %}
     </form>
+    {% endblock form_footer %}
   </div>
 </div>
 {% endblock content %}
